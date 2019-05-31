@@ -1,0 +1,7 @@
+applications:
+  - name: Whizbot
+    host: whizbot
+    command: python3 main.py
+    buildpack: python_buildpack
+    domain: apps.internal
+    

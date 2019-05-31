@@ -1,0 +1,10 @@
+.gitignore
+LICENSE
+README.md
+vcap-local.json
+node_modules
+.settings
+.git
+.project
+.pydevproject
+*tmp-browserify*

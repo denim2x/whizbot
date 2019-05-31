@@ -1,0 +1,27 @@
+{
+  "name": "web-knowledge-assistant",
+  "description": "An engaging virtual assistant capable of answering arbitrary open-ended questions",
+  "version": "1.0.0",
+  "author": "denim2x <denim2x@cyberdude.com>",
+  "license": "MIT",
+  "repository": "github:denim2x/web-knowledge-assistant",
+  "devDependencies": {
+    "@vendhq/uglifyify": "^5.1.0",
+    "browserify": "^16.2.3"
+  },
+  "dependencies": {
+    "domtastic": "^0.15.12",
+    "hyperscript-string": "^2.1.0",
+    "install": "^0.12.2",
+    "npm": "^6.9.0",
+    "rivets": "^0.9.6",
+    "superagent": "4.1.0",
+    "type-of": "^2.0.1"
+  },
+  "scripts": {
+    "build": "browserify app.js -d -o static/app.js",
+    "prestart": "browserify app.js -g uglifyify -d -o static/app.js",
+    "start": "npm run-script serve",
+    "serve": "python3 main.py"
+  }
+}

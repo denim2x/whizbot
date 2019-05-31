@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Whizbot</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="denim2x, denim2x@cyberdude.com">
+  <meta name="description" content="Engage into interesting conversations with this multi-purpose chatbot">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="shortcut icon" content="favicon.svg">
+  <link rel="icon" type="image/png" href="icon-512.png" sizes="512x512">
+  <link rel="stylesheet" href="master.css" />
+</head>
+
+<body class="Root">
+  <div class="Root-body">
+    <header class="Header">
+      <h1 class="Header-title">Whizbot</h1>
+    </header>
+
+    <main class="Conversation">
+      <div class="Conversation-body">
+        <div class="Conversation-history">
+          <div class="Conversation-message" rv-each-message="conversation" rv-class-user="message.is_user">
+            <pre class="Conversation-para" rv-each-para="message.text">{ para }</pre>
+          </div>
+        </div>
+        <div class="Conversation-textbox" rv-class-error="error">
+          <div class="u-textbox Conversation-input" autofocus contenteditable rv-input="message ? empty"></div>
+          <span class="u-placeholder">Your message here...</span>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
